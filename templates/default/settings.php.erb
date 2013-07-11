@@ -1,0 +1,12 @@
+<?php
+	// MySQL ConnectionData
+	include(dirname(__FILE__) . '/db_connect.php');
+
+	// General settings
+	define("SERVICE_NAME", '<%= node["oai"]["service"]["name"] %>');
+	define("SOLR", 'http://<%= node["oai"]["solr"]["host"] %>:<%= node["oai"]["solr"]["port"] %>/<%= node["oai"]["solr"]["path"] %>/<%= node["oai"]["service"]["name"] %>');
+	define("DATA_FOLDER", '<%= node["oai"]["path"] %>/harvester/data/<%= node["oai"]["service"]["name"] %>');
+
+	// common used settings
+	include(dirname(__FILE__) . '/../settings-common.php');
+?>
